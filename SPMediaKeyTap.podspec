@@ -14,11 +14,11 @@ Pod::Spec.new do |s|
   s.author       = { 'Joachim Bengtsson' => 'joachimb@gmail.com' }
   s.source       = { :git => "https://github.com/nevyn/SPMediaKeyTap.git", :tag => s.version.to_s }
 
-  s.platform     = :osx, '10.5'
-  s.osx.deployment_target = '10.5'
+  s.platform     = :osx, '10.7'
+  s.osx.deployment_target = '10.7'
   s.requires_arc = false
 
-  s.source_files = 'Classes/**/*.m'
+  s.source_files = 'Classes/**/*.{m,h}'
 
   s.osx.exclude_files = 'Classes/ios'
   s.public_header_files = 'Classes/**/*.h'
