@@ -19,10 +19,11 @@
 }
 + (NSArray *)defaultMediaKeyUserBundleIdentifiers;
 + (instancetype)sharedMediaKeyTap;
-
-- (id)initWithDelegate:(id)delegate;
-
 + (BOOL)usesGlobalMediaKeyTap;
+
+- (void)setDelegate:(id)delegate shouldAppWatch:(BOOL)shouldAppWatch;
+- (void)setDelegate:(id)delegate;
+
 - (void)startWatchingMediaKeys;
 - (void)stopWatchingMediaKeys;
 - (void)handleAndReleaseMediaKeyEvent:(NSEvent *)event;

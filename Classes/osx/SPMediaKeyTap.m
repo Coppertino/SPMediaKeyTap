@@ -50,13 +50,18 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type,
 	return self;
 }
 
-- (id)initWithDelegate:(id)delegate;
+- (void)setDelegate:(id)delegate shouldAppWatch:(BOOL)shouldAppWatch;
 {
-	self		= [self init];
-	_delegate	= delegate;
-	[self startWatchingAppSwitching];
+    _delegate	= delegate;
 
-	return self;
+    if (shouldAppWatch) {
+        [self startWatchingAppSwitching];
+    }
+}
+
+- (void)setDelegate:(id)delegate;
+{
+    [self setDelegate:delegate shouldAppWatch:YES];
 }
 
 - (void)dealloc;
