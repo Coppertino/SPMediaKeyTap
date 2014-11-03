@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/Coppertino/SPMediaKeyTap'
   s.license      = 'MIT'
   s.author       = { 'Joachim Bengtsson' => 'joachimb@gmail.com' }
-  s.source       = { :git => "https://github.com/nevyn/SPMediaKeyTap.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/Coppertino/SPMediaKeyTap.git", :tag => s.version.to_s }
 
   s.platform     = :osx, '10.7'
   s.osx.deployment_target = '10.7'
