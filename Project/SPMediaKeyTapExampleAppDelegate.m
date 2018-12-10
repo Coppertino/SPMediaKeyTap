@@ -30,7 +30,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	keyTap = [[SPMediaKeyTap alloc] initWithDelegate:self];
 	if([SPMediaKeyTap usesGlobalMediaKeyTap])
-		[keyTap startWatchingMediaKeys];
+        if ([keyTap startWatchingMediaKeys]) {
+            
+        }
 	else
 		NSLog(@"Media key monitoring disabled");
 
